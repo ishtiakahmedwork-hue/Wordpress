@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lora", serif;
+  --font-display: "Barlow Condensed", sans-serif;
+  
+  --color-green-primary: #1D9E75;
+  --color-green-light: #5DCAA5;
+  --color-green-pale: #9FE1CB;
+  --color-green-dark: #0F6E56;
+  --color-green-deeper: #085041;
+  
+  --color-dark-base: #0A1510;
+  --color-dark-surface: #0F1C15;
+  --color-dark-accent: #162318;
+  
+  --color-off-white: #F2EFE8;
+  --color-warm-white: #FAFAF7;
+}
+
+@layer base {
+  body {
+    @apply bg-warm-white text-[#1A2820] font-sans overflow-x-hidden antialiased;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image: 
+      repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(93,202,165,0.07) 60px, rgba(93,202,165,0.07) 60.5px),
+      repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(93,202,165,0.07) 60px, rgba(93,202,165,0.07) 60.5px);
+  }
+  
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    color: transparent;
+  }
+}
